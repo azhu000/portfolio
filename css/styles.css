@@ -150,7 +150,7 @@ footer {
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #333;
+    background-color: #0fc6db;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -159,5 +159,5 @@ footer {
     transition: background 0.3s;
 }
 .btn:hover {
-    background-color: #575757;
+    background-color: #c28181;
 }
