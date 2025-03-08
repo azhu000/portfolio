@@ -11,16 +11,28 @@ body {
 }
 
 .container {
-    text-align: center;
-    width: 80%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    text-align: left;
+    width: 95%;
     margin: 0 auto;
-    padding: 20px;
+    
 }
+
+/* #about {
+    width: 95%;
+    margin: 0 auto;
+    max-width: none;
+} */
 
 header {
     background: #333;
     color: #fff;
     padding: 20px 0;
+    padding-bottom: 0;
+    
 }
 
 header h1 {
@@ -32,33 +44,21 @@ header p {
     font-size: 1.2em;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background: #575757;
-}
-
 .section {
-    padding: 40px 0;
+    padding: 25px 0;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    /* width: 95%; */
+    margin-left: 75px;
+    width: 60vw;
 }
 
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    text-align: center;
+    /* text-align: center; */
+    
 }
 
 .projects {
@@ -69,6 +69,7 @@ h2 {
 
 .project {
     flex: 1;
+    justify-content: center;
     min-width: 250px;
     background: #f4f4f4;
     padding: 20px;
@@ -89,6 +90,14 @@ h2 {
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.skills li:hover {
+    background: #0fc6db;
 }
 
 .technologies {
@@ -96,6 +105,7 @@ h2 {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    cursor: pointer;
     list-style-type: none;
 }
 
@@ -104,6 +114,10 @@ h2 {
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+.technologies li:hover {
+    background: #0fc6db;
 }
 
 
@@ -161,3 +175,19 @@ footer {
 .btn:hover {
     background-color: #6ce28b;
 }
+
+.custom-nav-bar{
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#resume .btn {
+    display: inline-block;
+    width: 40%;
+}
+
+#resume .container{
+    align-items: center;
+}
+
