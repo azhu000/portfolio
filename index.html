@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -14,41 +15,26 @@
         <div class="container">
             <h1>Anthony Zhu</h1>
             <p>Software Engineer and Data Analyst</p>
-        </div>
-         
+        </div>       
     </header>
 
     <section>
         <script src="scripts/navBar.js" defer></script>
-        <custom-nav-bar class="custom-nav-bar"></custom-nav-bar>   
+        <custom-nav-bar class="custom-nav-bar"></custom-nav-bar>  
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                // Wait for the custom element to be added to the DOM
+                const navbar = document.querySelector('custom-nav-bar');
+                
+                // Initialize Bootstrap dropdown manually using jQuery
+                $(navbar.shadowRoot).find('.dropdown-toggle').dropdown();
+            });
+        </script> 
     </section>
 
-    <section id="about" class="section">
-        <div >
-            <h2>About Me</h2>
-            <p>Hello! I am Anthony Zhu, a passionate web developer/software engineer and data analyst with a knack for creating engaging and effective digital experiences.</p>
-        </div>
-    </section>
+   
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>Python</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>C (Programming Language)</li>
-                <li>Dart</li>
-                <li>Flutter</li>
-                <li>SQL</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Lisp</li>
-                <li>Git</li>
-            </ul>
-        </div>
-    </section>
+    
 
     <section id="technologies" class="section">
         <div class="container">
@@ -90,36 +76,7 @@
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3><a class="btn" href="https://employmentready.streamlit.app/" target="_blank">Employment-Ready</a></h3>
-                    <br>
-                    <p>An app that determines a user’s likelihood of being hired in a software engineering role based
-                        on the technologies and skills in their repertoire while also suggesting additional skills that would further improve the chances of employment.</p>
-                </div>
-                <div class="project">
-                    <h3><a class="btn" href="https://github.com/azhu000/Joe-s-Grab-and-Go" target="_blank">Restaurant Application</a></h3>
-                    <br>
-                    <p>A restaurant ordering website utilizing HTML, CSS, Bootstrap, Python, SQL and Flask. Dynamically interactive with optimized database in order to allow users to register, and order items. 
-                        Provides different levels of access for specific employee's ranging from Chef, Delivery or Manager. Complaint and compliment system combined with a tracker for manager. Was developed following a 
-                    full SDLC process. </p>
-                </div>
-                <div class="project">
-                    <h3><a class="btn" href="https://github.com/azhu000/MazeBall" target="_blank">MazeBall</a></h3>
-                    <br>
-                    <p>A physics simulation of a ball moving through a maze by utilizing the sensors (mainly the accelerometer and gyroscope) from a mobile device such as a phone or tablet.</p>
-                </div>
-                <div class="project">
-                    <br>
-                    <h3>Web Scraping Data Analysis (WIP)</h3>
-                    <p>A Webscraping Project focusing on scraping and cleaning data to use for the development of a Machine Learning Model.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <section id="resume" class="section"> 
         <div class="container">
@@ -131,10 +88,15 @@
 
 
 
-    <footer>
+    <footer id="my-footer">
         <div class="container">
             <p>&copy; 2024 Anthony Zhu. All rights reserved.</p>
         </div>
     </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap 4 JavaScript (includes Popper.js) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
