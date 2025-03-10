@@ -124,18 +124,22 @@ class navBarCons extends HTMLElement {
         // Function to adjust navbar margins based on screen width
         const adjustNavbarMargins = () => {
             const navbarNav = this.shadowRoot.querySelector('.navbar-nav');
-
+            const navbarCollapse = this.shadowRoot.querySelector('.navbar-collapse');
             if (window.innerWidth < 992) {
                 // For small screens, reduce margin
                 navbarNav.style.marginLeft = '70px';
                 navbarNav.style.marginTop = '278px';
                 navbarNav.style.backgroundColor = '#e3f2fd';
+                // navbarCollapse.style.position = 'fixed';
+                navbarNav.style.position = 'fixed';
+                
 
             } else {
                 // For larger screens, set default margin
                 navbarNav.style.marginLeft = '70px';
                 navbarNav.style.marginTop = '0px';
                 navbarNav.style.backgroundColor = '#e3f2fd';
+                navbarCollapse.style.position = 'sticky';
             }
         };
 
